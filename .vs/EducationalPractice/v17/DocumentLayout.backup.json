@@ -3,28 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\\u043C\u043E\u0439\\OneDrive\\Desktop\\RPM\\EducationalPractice\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{20D30CD6-6DE1-4ED7-9636-9A6311487AB6}|EducationalPractice\\EducationalPractice.csproj|c:\\users\\\u043C\u043E\u0439\\onedrive\\desktop\\rpm\\educationalpractice\\educationalpractice\\views\\examaddedit.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
-      "RelativeMoniker": "D:0:0:{20D30CD6-6DE1-4ED7-9636-9A6311487AB6}|EducationalPractice\\EducationalPractice.csproj|solutionrelative:educationalpractice\\views\\examaddedit.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20D30CD6-6DE1-4ED7-9636-9A6311487AB6}|EducationalPractice\\EducationalPractice.csproj|c:\\users\\\u043C\u043E\u0439\\onedrive\\desktop\\rpm\\educationalpractice\\educationalpractice\\views\\disciplineaddedit.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
-      "RelativeMoniker": "D:0:0:{20D30CD6-6DE1-4ED7-9636-9A6311487AB6}|EducationalPractice\\EducationalPractice.csproj|solutionrelative:educationalpractice\\views\\disciplineaddedit.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20D30CD6-6DE1-4ED7-9636-9A6311487AB6}|EducationalPractice\\EducationalPractice.csproj|c:\\users\\\u043C\u043E\u0439\\onedrive\\desktop\\rpm\\educationalpractice\\educationalpractice\\views\\examaddedit.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20D30CD6-6DE1-4ED7-9636-9A6311487AB6}|EducationalPractice\\EducationalPractice.csproj|solutionrelative:educationalpractice\\views\\examaddedit.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20D30CD6-6DE1-4ED7-9636-9A6311487AB6}|EducationalPractice\\EducationalPractice.csproj|c:\\users\\\u043C\u043E\u0439\\onedrive\\desktop\\rpm\\educationalpractice\\educationalpractice\\views\\disciplineaddedit.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20D30CD6-6DE1-4ED7-9636-9A6311487AB6}|EducationalPractice\\EducationalPractice.csproj|solutionrelative:educationalpractice\\views\\disciplineaddedit.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{20D30CD6-6DE1-4ED7-9636-9A6311487AB6}|EducationalPractice\\EducationalPractice.csproj|c:\\users\\\u043C\u043E\u0439\\onedrive\\desktop\\rpm\\educationalpractice\\educationalpractice\\pages\\admin.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{20D30CD6-6DE1-4ED7-9636-9A6311487AB6}|EducationalPractice\\EducationalPractice.csproj|solutionrelative:educationalpractice\\pages\\admin.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{20D30CD6-6DE1-4ED7-9636-9A6311487AB6}|EducationalPractice\\EducationalPractice.csproj|c:\\users\\\u043C\u043E\u0439\\onedrive\\desktop\\rpm\\educationalpractice\\educationalpractice\\pages\\admin.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20D30CD6-6DE1-4ED7-9636-9A6311487AB6}|EducationalPractice\\EducationalPractice.csproj|solutionrelative:educationalpractice\\pages\\admin.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20D30CD6-6DE1-4ED7-9636-9A6311487AB6}|EducationalPractice\\EducationalPractice.csproj|c:\\users\\\u043C\u043E\u0439\\onedrive\\desktop\\rpm\\educationalpractice\\educationalpractice\\pages\\admin.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
-      "RelativeMoniker": "D:0:0:{20D30CD6-6DE1-4ED7-9636-9A6311487AB6}|EducationalPractice\\EducationalPractice.csproj|solutionrelative:educationalpractice\\pages\\admin.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
     }
   ],
   "DocumentGroupContainers": [
@@ -63,74 +47,24 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ExamAddEdit.axaml",
-              "DocumentMoniker": "C:\\Users\\\u043C\u043E\u0439\\OneDrive\\Desktop\\RPM\\EducationalPractice\\EducationalPractice\\Views\\ExamAddEdit.axaml",
-              "RelativeDocumentMoniker": "EducationalPractice\\Views\\ExamAddEdit.axaml",
-              "ToolTip": "C:\\Users\\\u043C\u043E\u0439\\OneDrive\\Desktop\\RPM\\EducationalPractice\\EducationalPractice\\Views\\ExamAddEdit.axaml",
-              "RelativeToolTip": "EducationalPractice\\Views\\ExamAddEdit.axaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-17T17:47:52.252Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ExamAddEdit.axaml.cs",
-              "DocumentMoniker": "C:\\Users\\\u043C\u043E\u0439\\OneDrive\\Desktop\\RPM\\EducationalPractice\\EducationalPractice\\Views\\ExamAddEdit.axaml.cs",
-              "RelativeDocumentMoniker": "EducationalPractice\\Views\\ExamAddEdit.axaml.cs",
-              "ToolTip": "C:\\Users\\\u043C\u043E\u0439\\OneDrive\\Desktop\\RPM\\EducationalPractice\\EducationalPractice\\Views\\ExamAddEdit.axaml.cs",
-              "RelativeToolTip": "EducationalPractice\\Views\\ExamAddEdit.axaml.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAYwB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T17:47:51.876Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DisciplineAddEdit.axaml",
-              "DocumentMoniker": "C:\\Users\\\u043C\u043E\u0439\\OneDrive\\Desktop\\RPM\\EducationalPractice\\EducationalPractice\\Views\\DisciplineAddEdit.axaml",
-              "RelativeDocumentMoniker": "EducationalPractice\\Views\\DisciplineAddEdit.axaml",
-              "ToolTip": "C:\\Users\\\u043C\u043E\u0439\\OneDrive\\Desktop\\RPM\\EducationalPractice\\EducationalPractice\\Views\\DisciplineAddEdit.axaml",
-              "RelativeToolTip": "EducationalPractice\\Views\\DisciplineAddEdit.axaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-17T17:45:53.803Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DisciplineAddEdit.axaml.cs",
-              "DocumentMoniker": "C:\\Users\\\u043C\u043E\u0439\\OneDrive\\Desktop\\RPM\\EducationalPractice\\EducationalPractice\\Views\\DisciplineAddEdit.axaml.cs",
-              "RelativeDocumentMoniker": "EducationalPractice\\Views\\DisciplineAddEdit.axaml.cs",
-              "ToolTip": "C:\\Users\\\u043C\u043E\u0439\\OneDrive\\Desktop\\RPM\\EducationalPractice\\EducationalPractice\\Views\\DisciplineAddEdit.axaml.cs",
-              "RelativeToolTip": "EducationalPractice\\Views\\DisciplineAddEdit.axaml.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAowBwAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T17:46:07.147Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "Admin.axaml",
               "DocumentMoniker": "C:\\Users\\\u043C\u043E\u0439\\OneDrive\\Desktop\\RPM\\EducationalPractice\\EducationalPractice\\Pages\\Admin.axaml",
               "RelativeDocumentMoniker": "EducationalPractice\\Pages\\Admin.axaml",
-              "ToolTip": "C:\\Users\\\u043C\u043E\u0439\\OneDrive\\Desktop\\RPM\\EducationalPractice\\EducationalPractice\\Pages\\Admin.axaml",
-              "RelativeToolTip": "EducationalPractice\\Pages\\Admin.axaml",
+              "ToolTip": "C:\\Users\\\u043C\u043E\u0439\\OneDrive\\Desktop\\RPM\\EducationalPractice\\EducationalPractice\\Pages\\Admin.axaml*",
+              "RelativeToolTip": "EducationalPractice\\Pages\\Admin.axaml*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-11-16T22:33:39.095Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Admin.axaml.cs",
               "DocumentMoniker": "C:\\Users\\\u043C\u043E\u0439\\OneDrive\\Desktop\\RPM\\EducationalPractice\\EducationalPractice\\Pages\\Admin.axaml.cs",
               "RelativeDocumentMoniker": "EducationalPractice\\Pages\\Admin.axaml.cs",
               "ToolTip": "C:\\Users\\\u043C\u043E\u0439\\OneDrive\\Desktop\\RPM\\EducationalPractice\\EducationalPractice\\Pages\\Admin.axaml.cs",
               "RelativeToolTip": "EducationalPractice\\Pages\\Admin.axaml.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAkwFoAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAM4AAAAAAAAAAAAiwOcAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-16T22:33:40.156Z",
               "EditorCaption": ""

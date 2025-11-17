@@ -57,21 +57,15 @@
 		</Expander>
 
 		<StackPanel Orientation="Horizontal"
-					Margin="10">
-			<TextBox Width="200"
+					Margin="10"
+					HorizontalAlignment="Center">
+			<TextBox Width="300"
 				 Margin="0 0 10 0"
-				 HorizontalAlignment="Left"
 				 VerticalAlignment="Top"
 					 x:Name="TBSearch"
 					 Classes="Email"
 					 TextChanged="TBSearch_TextChanged"
-					 Watermark="Name"/>
-			<ComboBox x:Name="CBFilter"
-					  Width="140"
-					 HorizontalAlignment="Left"
-					 VerticalAlignment="Top"
-				  Classes="CBoxic"
-					  SelectionChanged="CBFilter_SelectionChanged"/>
+					 Watermark="Input"/>
 			
 		</StackPanel>
 		
@@ -96,8 +90,30 @@
 							 Margin="10">
 
 					<TabItem Header="Employees"
-							 x:Name="TIEmployee">
+							 x:Name="TIEmployee"
+							 Tapped="TIEmployee_Tapped">
+						<Grid>
+							<Grid.RowDefinitions>
+								<RowDefinition Height="auto"/>
+								<RowDefinition Height="*"/>
+							</Grid.RowDefinitions>
+							<StackPanel Orientation="Horizontal"
+				   Grid.Row="0">
+								<ComboBox x:Name="CBCode"
+						  Classes="CBoxic"
+						  
+						  Width="200"
+						   Height="30"
+						  Margin="0 10 10 10"/>
+								<ComboBox x:Name="CBPost"
+						  Classes="CBoxic"
+						  
+						  Width="200"
+						   Height="30"
+						  Margin="0 10 0 10"/>
+							</StackPanel>
 						<DataGrid x:Name="DGEmployee"
+				Grid.Row="1"
 								  IsReadOnly="True"
 								  DoubleTapped="DGEmployee_DoubleTapped"
 								  AutoGenerateColumns="False">
@@ -120,10 +136,13 @@
 													Binding="{Binding Password}"/>
 							</DataGrid.Columns>
 						</DataGrid>
+						</Grid>
+						
 					</TabItem>
 					
 					<TabItem Header="Students"
-							 x:Name="TIStudent">
+							 x:Name="TIStudent"
+							 Tapped="TIStudent_Tapped">
 						<DataGrid x:Name="DGStudent"
 								  IsReadOnly="True"
 								  DoubleTapped="DGStudent_DoubleTapped"
@@ -138,7 +157,8 @@
 					</TabItem>
 					
 					<TabItem Header="Disciplines"
-							 x:Name="TIDiscipline">
+							 x:Name="TIDiscipline"
+							 Tapped="TIDiscipline_Tapped">
 						<DataGrid x:Name="DGDiscipline"
 								  IsReadOnly="True"
 								  DoubleTapped="DGDiscipline_DoubleTapped"
@@ -157,7 +177,8 @@
 					
 					
 					<TabItem Header="Exams"
-							 x:Name="TIExam">
+							 x:Name="TIExam"
+							 Tapped="TIExam_Tapped">
 						<DataGrid x:Name="DGExam"
 								  IsReadOnly="True"
 								  DoubleTapped="DGExam_DoubleTapped"

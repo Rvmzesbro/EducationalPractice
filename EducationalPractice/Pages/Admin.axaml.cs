@@ -20,12 +20,60 @@ public partial class Admin : UserControl
         DataContext = employee;
     }
 
+    private void Filter()
+    {
+        if (TIEmployee.IsSelected)
+        {
+            if (TBSearch.Text == null || DGEmployee == null) return;
+            var searchText = TBSearch.Text?.ToLower() ?? string.Empty;
+
+            var allEmployee = App.db.Employees.ToList();
+
+            if (!string.IsNullOrWhiteSpace(searchText))
+            {
+                allEmployee = allEmployee.Where(p => p.FullName?.ToLower().Contains(searchText) == true).ToList();
+            }
+
+            DGEmployee.ItemsSource = allEmployee;
+        }
+        if (TIStudent.IsSelected)
+        {
+            if (TBSearch.Text == null || DGStudent == null) return;
+            var searchText = TBSearch.Text?.ToLower() ?? string.Empty;
+
+            var allEmployee = App.db.Students.ToList();
+
+            if (!string.IsNullOrWhiteSpace(searchText))
+            {
+                allEmployee = allEmployee.Where(p => p.FullName?.ToLower().Contains(searchText) == true).ToList();
+            }
+
+            DGStudent.ItemsSource = allEmployee;
+        }
+        if (TIDiscipline.IsSelected)
+        {
+            if (TBSearch.Text == null || DGDiscipline == null) return;
+            var searchText = TBSearch.Text?.ToLower() ?? string.Empty;
+
+            var allEmployee = App.db.Disciplines.ToList();
+
+            if (!string.IsNullOrWhiteSpace(searchText))
+            {
+                allEmployee = allEmployee.Where(p => p.Name?.ToLower().Contains(searchText) == true).ToList();
+            }
+
+            DGDiscipline.ItemsSource = allEmployee;
+        }
+
+    }
+
     private void Bindings()
     {
         DGEmployee.ItemsSource = App.db.Employees.ToList();
         DGStudent.ItemsSource = App.db.Students.ToList();
         DGDiscipline.ItemsSource = App.db.Disciplines.ToList();
         DGExam.ItemsSource = App.db.Exams.ToList();
+        Filter();
     }
 
     private void BTProfile_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
@@ -40,17 +88,17 @@ public partial class Admin : UserControl
 
     private void TBSearch_TextChanged(object? sender, TextChangedEventArgs e)
     {
-
+        Filter();
     }
 
     private void CBFilter_SelectionChanged(object? sender, SelectionChangedEventArgs e)
     {
-
+        Filter();
     }
 
     private async void DGEmployee_DoubleTapped(object? sender, Avalonia.Input.TappedEventArgs e)
     {
-        if(DGEmployee.SelectedItem is Employee employee)
+        if (DGEmployee.SelectedItem is Employee employee)
         {
             var TransitionView = new EmployeeAddEdit(employee);
             var parent = this.VisualRoot as Window;
@@ -61,7 +109,7 @@ public partial class Admin : UserControl
 
     private async void DGStudent_DoubleTapped(object? sender, Avalonia.Input.TappedEventArgs e)
     {
-        if(DGStudent.SelectedItem is Student student)
+        if (DGStudent.SelectedItem is Student student)
         {
             var TransitionView = new StudentAddEdit(student);
             var parent = this.VisualRoot as Window;
@@ -72,7 +120,7 @@ public partial class Admin : UserControl
 
     private async void DGDiscipline_DoubleTapped(object? sender, Avalonia.Input.TappedEventArgs e)
     {
-        if(DGDiscipline.SelectedItem is Discipline discipline)
+        if (DGDiscipline.SelectedItem is Discipline discipline)
         {
             var TransitionView = new DisciplineAddEdit(discipline);
             var parent = this.VisualRoot as Window;
@@ -128,7 +176,7 @@ public partial class Admin : UserControl
     {
         if (TIEmployee.IsSelected)
         {
-            if(DGEmployee.SelectedItem is Employee DeleteEmployee)
+            if (DGEmployee.SelectedItem is Employee DeleteEmployee)
             {
                 App.db.Employees.Remove(DeleteEmployee);
                 await App.db.SaveChangesAsync();
@@ -137,7 +185,7 @@ public partial class Admin : UserControl
         }
         if (TIStudent.IsSelected)
         {
-            if(DGStudent.SelectedItem is Student DeleteStudent)
+            if (DGStudent.SelectedItem is Student DeleteStudent)
             {
                 App.db.Students.Remove(DeleteStudent);
                 await App.db.SaveChangesAsync();
@@ -146,7 +194,7 @@ public partial class Admin : UserControl
         }
         if (TIDiscipline.IsSelected)
         {
-            if(DGDiscipline.SelectedItem is Discipline DeleteDiscipline)
+            if (DGDiscipline.SelectedItem is Discipline DeleteDiscipline)
             {
                 App.db.Disciplines.Remove(DeleteDiscipline);
                 await App.db.SaveChangesAsync();
@@ -155,12 +203,32 @@ public partial class Admin : UserControl
         }
         if (TIExam.IsSelected)
         {
-            if(DGExam.SelectedItem is Exam DeleteExam)
+            if (DGExam.SelectedItem is Exam DeleteExam)
             {
                 App.db.Exams.Remove(DeleteExam);
                 await App.db.SaveChangesAsync();
                 Bindings();
             }
         }
+    }
+
+    private void TIExam_Tapped(object? sender, Avalonia.Input.TappedEventArgs e)
+    {
+        TBSearch.Opacity = 0.0;
+    }
+
+    private void TIDiscipline_Tapped(object? sender, Avalonia.Input.TappedEventArgs e)
+    {
+        TBSearch.Opacity = 1.0;
+    }
+
+    private void TIStudent_Tapped(object? sender, Avalonia.Input.TappedEventArgs e)
+    {
+        TBSearch.Opacity = 1.0;
+    }
+
+    private void TIEmployee_Tapped(object? sender, Avalonia.Input.TappedEventArgs e)
+    {
+        TBSearch.Opacity = 1.0;
     }
 }

@@ -24,7 +24,7 @@
 				<TextBox Classes="Email"
 						 Margin="0 0 0 10"
 						 Watermark="Enter date"
-						 Text="{Binding Date}"
+						 Text="{Binding Date, Mode=OneWay}"
 						 x:Name="TBDate"/>
 				<TextBlock Text="Auditorium"
 						   Classes="TBBack"/>
