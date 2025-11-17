@@ -1,0 +1,217 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="EducationalPractice.Admin">
+  <UserControl.Styles>
+		<StyleInclude Source="/Styles/AdminWindowStyle.axaml"></StyleInclude>
+	</UserControl.Styles>
+	
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+		<Expander x:Name="ProfileExpander"
+			   Background="#252746"
+			  BorderBrush="Black"
+			  BorderThickness="1"
+						  HorizontalAlignment="Right"
+						  VerticalAlignment="Top"
+				  Grid.RowSpan="2"
+				  Width="140"
+			  CornerRadius="8"
+			  Margin="10">
+
+			<Expander.Header>
+				<StackPanel Orientation="Horizontal" Spacing="8">
+					<StackPanel VerticalAlignment="Center">
+						<TextBlock Text="{Binding FullName}" FontWeight="Bold"/>
+						<TextBlock Text="Administrator" FontSize="12" Opacity="0.7"/>
+					</StackPanel>
+				</StackPanel>
+			</Expander.Header>
+
+			<Expander.Content>
+				<StackPanel Spacing="5">
+					<Button x:Name="BTProfile" Click="BTProfile_Click"
+							Width="110"
+							HorizontalAlignment="Center">
+						<TextBlock Text="My profile"
+								   HorizontalAlignment="Center"
+								   VerticalAlignment="Center"/>
+					</Button>
+					<Button x:Name="BTLogout" Click="BTLogout_Click"
+							Width="110"
+							HorizontalAlignment="Center">
+						<TextBlock Text="Logout"
+								   HorizontalAlignment="Center"
+								   VerticalAlignment="Center"/>
+					</Button>
+				</StackPanel>
+			</Expander.Content>
+		</Expander>
+
+		<StackPanel Orientation="Horizontal"
+					Margin="10">
+			<TextBox Width="200"
+				 Margin="0 0 10 0"
+				 HorizontalAlignment="Left"
+				 VerticalAlignment="Top"
+					 x:Name="TBSearch"
+					 Classes="Email"
+					 TextChanged="TBSearch_TextChanged"
+					 Watermark="Name"/>
+			<ComboBox x:Name="CBFilter"
+					  Width="140"
+					 HorizontalAlignment="Left"
+					 VerticalAlignment="Top"
+				  Classes="CBoxic"
+					  SelectionChanged="CBFilter_SelectionChanged"/>
+			
+		</StackPanel>
+		
+		
+		
+		<Viewbox Grid.Row="1"
+				 VerticalAlignment="Top"
+				 Margin="0 20 0 0">
+			<Grid>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="*"/>
+				</Grid.RowDefinitions>
+
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition/>
+					<ColumnDefinition/>
+				</Grid.ColumnDefinitions>
+
+				<TabControl  Width="1300"
+								  Height="700"
+							 Margin="10">
+
+					<TabItem Header="Employees"
+							 x:Name="TIEmployee"
+							 Tapped="TIEmployee_Tapped">
+						<DataGrid x:Name="DGEmployee"
+								  IsReadOnly="True"
+								  DoubleTapped="DGEmployee_DoubleTapped"
+								  AutoGenerateColumns="False">
+							<DataGrid.Columns>
+								<DataGridTextColumn Header="Code"
+													Binding="{Binding Code}"/>
+								<DataGridTextColumn Header="FullName"
+													Binding="{Binding FullName}"/>
+								<DataGridTextColumn Header="Post"
+													Binding="{Binding Post}"/>
+								<DataGridTextColumn Header="Salary"
+													Binding="{Binding Salary}"/>
+								<DataGridTextColumn Header="Director"
+													Binding="{Binding Director}"/>
+								<DataGridTextColumn Header="Role"
+													Binding="{Binding Role.Name}"/>
+								<DataGridTextColumn Header="Login"
+													Binding="{Binding Login}"/>
+								<DataGridTextColumn Header="Password"
+													Binding="{Binding Password}"/>
+							</DataGrid.Columns>
+						</DataGrid>
+					</TabItem>
+					
+					<TabItem Header="Students"
+							 x:Name="TIStudent"
+							 Tapped="TIStudent_Tapped">
+						<DataGrid x:Name="DGStudent"
+								  IsReadOnly="True"
+								  DoubleTapped="DGStudent_DoubleTapped"
+								  AutoGenerateColumns="False">
+							<DataGrid.Columns>
+								<DataGridTextColumn Header="FullName"
+													Binding="{Binding FullName}"/>
+								<DataGridTextColumn Header="Number"
+													Binding="{Binding Number}"/>
+							</DataGrid.Columns>
+						</DataGrid>
+					</TabItem>
+					
+					<TabItem Header="Disciplines"
+							 x:Name="TIDiscipline"
+							 Tapped="TIDiscipline_Tapped">
+						<DataGrid x:Name="DGDiscipline"
+								  IsReadOnly="True"
+								  DoubleTapped="DGDiscipline_DoubleTapped"
+								  AutoGenerateColumns="False">
+							<DataGrid.Columns>
+								<DataGridTextColumn Header="Name"
+													Binding="{Binding Name}"/>
+								<DataGridTextColumn Header="Volume"
+													Binding="{Binding Volume}"/>
+								<DataGridTextColumn Header="Executor"
+													Binding="{Binding Executor}"/>
+							</DataGrid.Columns>
+						</DataGrid>
+					</TabItem>
+					
+					
+					
+					<TabItem Header="Exams"
+							 x:Name="TIExam"
+							 Tapped="TIExam_Tapped">
+						<DataGrid x:Name="DGExam"
+								  IsReadOnly="True"
+								  DoubleTapped="DGExam_DoubleTapped"
+								  AutoGenerateColumns="False">
+							<DataGrid.Columns>
+								<DataGridTextColumn Header="Date"
+													Binding="{Binding Date}"/>
+								<DataGridTextColumn Header="Discipline"
+													Binding="{Binding Discipline.Name}"/>
+								<DataGridTextColumn Header="Student"
+													Binding="{Binding Student.FullName}"/>
+								<DataGridTextColumn Header="Auditorium"
+													Binding="{Binding Auditorium}"/>
+								<DataGridTextColumn Header="Estimation"
+													Binding="{Binding Estimation}"/>
+								<DataGridTextColumn Header="Employee"
+													Binding="{Binding Employee.FullName}"/>
+							</DataGrid.Columns>
+						</DataGrid>
+					</TabItem>
+				</TabControl>
+			</Grid>
+		</Viewbox>
+		<StackPanel Orientation="Horizontal"
+							Grid.Row="2"
+					Margin="20">
+			<Button x:Name="BTAdd"
+				Classes="BTBack"
+				HorizontalAlignment="Right"
+				VerticalAlignment="Top"
+				Margin="10"
+				Width="70"
+				Height="30"
+				Click="BTAdd_Click">
+				<TextBlock Classes="TBBack"
+						   Text="Add"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"/>
+				</Button>
+			<Button x:Name="BTRemove"
+				Classes="BTBack"
+				HorizontalAlignment="Right"
+				VerticalAlignment="Top"
+				Margin="10"
+				Width="70"
+				Height="30"
+				Click="BTRemove_Click">
+				<TextBlock Classes="TBBack"
+						   Text="Remove"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"/>
+			</Button>
+		</StackPanel>
+	</Grid>
+</UserControl>
