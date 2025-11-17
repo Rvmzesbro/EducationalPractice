@@ -1,0 +1,60 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="EducationalPractice.DisciplineAddEdit"
+        Title="DisciplineAddEdit"
+        Background="#252746">
+  
+    <Window.Styles>
+	<StyleInclude Source="/Styles/EmployeeAddEditStyle.axaml"></StyleInclude>
+</Window.Styles>
+
+<Viewbox Margin="70">
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		<StackPanel Grid.Column="0"
+		   Grid.ColumnSpan="2"
+					Margin="0 0 5 0">
+			<TextBlock Text="Name"
+					   Classes="TBBack"/>
+			<TextBox Classes="Email"
+					 Margin="0 0 0 10"
+					 Watermark="Enter name"
+					 x:Name="TBName"
+					 Text="{Binding Name}"/>
+			<TextBlock Text="Volume"
+					   Classes="TBBack"/>
+			<TextBox Classes="Email"
+					 Margin="0 0 0 10"
+					 Watermark="Enter volume"
+					 x:Name="TBVolume"
+					 Text="{Binding Volume}"/>
+			<TextBlock Text="Executor"
+					   Classes="TBBack"/>
+			<TextBox Classes="Email"
+					 Margin="0 0 0 10"
+					 Watermark="Enter executor"
+					 x:Name="TBExecutor"
+					 Text="{Binding Executor}"/>
+			<Button x:Name="BTAdd"
+			Classes="BTBack"
+			HorizontalAlignment="Left"
+			
+			Width="70"
+			Height="30"
+			Click="BTAdd_Click">
+				<TextBlock Classes="TBBack"
+						   Text="Click"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"/>
+			</Button>
+		</StackPanel>
+	</Grid>
+</Viewbox>
+
+</Window>

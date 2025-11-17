@@ -31,6 +31,5 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.10" />
-	  <AvaloniaResource Include="App.axaml" />
   </ItemGroup>
 </Project>

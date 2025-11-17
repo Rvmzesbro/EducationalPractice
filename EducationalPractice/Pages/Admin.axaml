@@ -3,8 +3,10 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="EducationalPractice.Admin">
-  <UserControl.Styles>
+             x:Class="EducationalPractice.Admin"
+			 Background="#252746">
+  
+	<UserControl.Styles>
 		<StyleInclude Source="/Styles/AdminWindowStyle.axaml"></StyleInclude>
 	</UserControl.Styles>
 	
@@ -94,8 +96,7 @@
 							 Margin="10">
 
 					<TabItem Header="Employees"
-							 x:Name="TIEmployee"
-							 Tapped="TIEmployee_Tapped">
+							 x:Name="TIEmployee">
 						<DataGrid x:Name="DGEmployee"
 								  IsReadOnly="True"
 								  DoubleTapped="DGEmployee_DoubleTapped"
@@ -122,8 +123,7 @@
 					</TabItem>
 					
 					<TabItem Header="Students"
-							 x:Name="TIStudent"
-							 Tapped="TIStudent_Tapped">
+							 x:Name="TIStudent">
 						<DataGrid x:Name="DGStudent"
 								  IsReadOnly="True"
 								  DoubleTapped="DGStudent_DoubleTapped"
@@ -138,8 +138,7 @@
 					</TabItem>
 					
 					<TabItem Header="Disciplines"
-							 x:Name="TIDiscipline"
-							 Tapped="TIDiscipline_Tapped">
+							 x:Name="TIDiscipline">
 						<DataGrid x:Name="DGDiscipline"
 								  IsReadOnly="True"
 								  DoubleTapped="DGDiscipline_DoubleTapped"
@@ -158,8 +157,7 @@
 					
 					
 					<TabItem Header="Exams"
-							 x:Name="TIExam"
-							 Tapped="TIExam_Tapped">
+							 x:Name="TIExam">
 						<DataGrid x:Name="DGExam"
 								  IsReadOnly="True"
 								  DoubleTapped="DGExam_DoubleTapped"

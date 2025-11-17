@@ -1,0 +1,86 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="EducationalPractice.ExamAddEdit"
+        Title="ExamAddEdit"
+        Background="#252746">
+  
+    <Window.Styles>
+		<StyleInclude Source="/Styles/EmployeeAddEditStyle.axaml"></StyleInclude>
+	</Window.Styles>
+	
+	<Viewbox Margin="70">
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+			</Grid.ColumnDefinitions>
+			<StackPanel Grid.Column="0"
+						Margin="0 0 5 0">
+				<TextBlock Text="Date"
+						   Classes="TBBack"/>
+				<TextBox Classes="Email"
+						 Margin="0 0 0 10"
+						 Watermark="Enter date"
+						 Text="{Binding Date}"
+						 x:Name="TBDate"/>
+				<TextBlock Text="Auditorium"
+						   Classes="TBBack"/>
+				<TextBox Classes="Email"
+						 Margin="0 0 0 10"
+						 Watermark="Enter auditorium"
+						 x:Name="TBAuditorium"
+						 Text="{Binding Auditorium}"/>
+				<TextBlock Text="Estimation"
+						   Classes="TBBack"/>
+				<TextBox Classes="Email"
+						 Margin="0 0 0 10"
+						 Watermark="Enter estimation"
+						 x:Name="TBEstimation"
+						 Text="{Binding Estimation}"/>
+				<Button x:Name="BTAdd"
+				Classes="BTBack"
+				HorizontalAlignment="Left"
+				
+				Width="70"
+				Height="30"
+				Click="BTAdd_Click">
+					<TextBlock Classes="TBBack"
+							   Text="Click"
+							   HorizontalAlignment="Center"
+							   VerticalAlignment="Center"/>
+				</Button>
+			</StackPanel>
+			<StackPanel Grid.Column="1">
+				<TextBlock Text="Discipline"
+						   Classes="TBBack"/>
+			<ComboBox x:Name="CBDiscipline"
+						  Classes="CBoxic"
+						  SelectedItem="{Binding Discipline}"
+						  Width="200"
+						  Height="30"
+						  Margin="0 0 0 10"/>
+				<TextBlock Text="Student"
+					   Classes="TBBack"/>
+			<ComboBox x:Name="CBStudent"
+					  Classes="CBoxic"
+					  SelectedItem="{Binding Student}"
+					  Width="200"
+					   Height="30"
+					  Margin="0 0 0 10"/>
+				
+				<TextBlock Text="Employee"
+					   Classes="TBBack"/>
+			<ComboBox x:Name="CBEmployee"
+					  Classes="CBoxic"
+					  SelectedItem="{Binding Employee}"
+					  Width="200"
+					   Height="30"
+					  Margin="0 0 0 10"/>
+			</StackPanel>
+		</Grid>
+	</Viewbox>
+
+</Window>

@@ -45,11 +45,41 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [C:/Users/мой/OneDrive/Desktop/RPM/EducationalPractice/EducationalPractice/Pages/ManagerStudent.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/мой/OneDrive/Desktop/RPM/EducationalPractice/EducationalPractice/Pages/Profile.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/мой/OneDrive/Desktop/RPM/EducationalPractice/EducationalPractice/Pages/Registration.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/мой/OneDrive/Desktop/RPM/EducationalPractice/EducationalPractice/Styles/AdminProfileEditStyle.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/мой/OneDrive/Desktop/RPM/EducationalPractice/EducationalPractice/Styles/AdminProfileStyle.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/мой/OneDrive/Desktop/RPM/EducationalPractice/EducationalPractice/Styles/AdminWindowStyle.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/мой/OneDrive/Desktop/RPM/EducationalPractice/EducationalPractice/Styles/EmployeeAddEditStyle.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/мой/OneDrive/Desktop/RPM/EducationalPractice/EducationalPractice/Styles/MainWindowStyle.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/мой/OneDrive/Desktop/RPM/EducationalPractice/EducationalPractice/Styles/RegistrationWindowStyle.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/мой/OneDrive/Desktop/RPM/EducationalPractice/EducationalPractice/Views/DisciplineAddEdit.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/мой/OneDrive/Desktop/RPM/EducationalPractice/EducationalPractice/Views/EditProfile.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/мой/OneDrive/Desktop/RPM/EducationalPractice/EducationalPractice/Views/EmployeeAddEdit.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/мой/OneDrive/Desktop/RPM/EducationalPractice/EducationalPractice/Views/ExamAddEdit.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/мой/OneDrive/Desktop/RPM/EducationalPractice/EducationalPractice/Views/StudentAddEdit.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

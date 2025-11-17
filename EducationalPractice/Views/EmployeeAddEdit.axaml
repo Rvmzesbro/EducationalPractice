@@ -1,0 +1,96 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="EducationalPractice.EmployeeAddEdit"
+        Title="EmployeeAddEdit"
+        Background="#252746">
+  
+        <Window.Styles>
+		<StyleInclude Source="/Styles/EmployeeAddEditStyle.axaml"></StyleInclude>
+	</Window.Styles>
+	
+	<Viewbox Margin="70">
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+			</Grid.ColumnDefinitions>
+			<StackPanel Grid.Column="0"
+						Margin="0 0 5 0">
+				<TextBlock Text="Code"
+						   Classes="TBBack"/>
+				<TextBox Classes="Email"
+						 Margin="0 0 0 10"
+						 Watermark="Enter code"
+						 x:Name="TBCode"
+						 Text="{Binding Code}"/>
+				<TextBlock Text="FullName"
+						   Classes="TBBack"/>
+				<TextBox Classes="Email"
+						 Margin="0 0 0 10"
+						 Watermark="Enter fullname"
+						 x:Name="TBFullName"
+						 Text="{Binding FullName}"/>
+				<TextBlock Text="Post"
+						   Classes="TBBack"/>
+				<TextBox Classes="Email"
+						 Margin="0 0 0 10"
+						 Watermark="Enter post"
+						 x:Name="TBPost"
+						 Text="{Binding Post}"/>
+				<TextBlock Text="Role"
+						   Classes="TBBack"/>
+				<ComboBox x:Name="CBRole"
+						  Classes="CBoxic"
+						  SelectedItem="{Binding Role}"
+						  Width="200"
+						  Margin="0 0 0 10"/>
+				<Button x:Name="BTAdd"
+				Classes="BTBack"
+				HorizontalAlignment="Left"
+				
+				Width="70"
+				Height="30"
+				Click="BTAdd_Click">
+					<TextBlock Classes="TBBack"
+							   Text="Click"
+							   HorizontalAlignment="Center"
+							   VerticalAlignment="Center"/>
+				</Button>
+			</StackPanel>
+			<StackPanel Grid.Column="1">
+				<TextBlock Text="Salary"
+						   Classes="TBBack"/>
+				<TextBox Classes="Email"
+						 Margin="0 0 0 10"
+						 Watermark="Enter salary"
+						 x:Name="TBSalary"
+						 Text="{Binding Salary}"/>
+				<TextBlock Text="Director"
+						   Classes="TBBack"/>
+				<TextBox Classes="Email"
+						 Margin="0 0 0 10"
+						 Watermark="Enter director"
+						 x:Name="TBDirector"
+						 Text="{Binding Director}"/>
+				
+				<TextBlock Text="Login"
+						   Classes="TBBack"/>
+				<TextBox Classes="Email"
+						 Margin="0 0 0 10"
+						 Watermark="Enter login"
+						 x:Name="TBLogin"
+						 Text="{Binding Login}"/>
+				<TextBlock Text="Password"
+						   Classes="TBBack"/>
+				<TextBox Classes="Email"
+						 Margin="0 0 0 10"
+						 Watermark="Enter password"
+						 x:Name="TBPassword"
+						 Text="{Binding Password}"/>
+			</StackPanel>
+		</Grid>
+	</Viewbox>
+</Window>
