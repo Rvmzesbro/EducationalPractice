@@ -2,17 +2,14 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using EducationalPractice.Models;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Diagnostics;
 using System.Linq;
 
 namespace EducationalPractice;
 
-public partial class Admin : UserControl
+public partial class AdminEngineer : UserControl
 {
-    public Employee employee { get; set; }
-    public Admin(Employee selected_employee)
+    public Employee employee;
+    public AdminEngineer(Employee selected_employee)
     {
         InitializeComponent();
         Bindings();
@@ -69,7 +66,7 @@ public partial class Admin : UserControl
 
     private void Bindings()
     {
-        DGEmployee.ItemsSource = App.db.Employees.Where(p => p.RoleId != 1).ToList();
+        DGEmployee.ItemsSource = App.db.Employees.Where(p => p.RoleId != 1 || p.RoleId == 6).ToList();
         DGStudent.ItemsSource = App.db.Students.ToList();
         DGDiscipline.ItemsSource = App.db.Disciplines.ToList();
         DGExam.ItemsSource = App.db.Exams.ToList();

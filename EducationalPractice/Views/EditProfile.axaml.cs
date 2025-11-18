@@ -19,7 +19,7 @@ public partial class EditProfile : Window
     }
     private async void BTEdit_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
-        if (string.IsNullOrWhiteSpace(TBFullName.Text) || string.IsNullOrWhiteSpace(TBLogin.Text) || string.IsNullOrWhiteSpace(TBPassword.Text) || !TBLogin.Text.Contains('@') || !TBLogin.Text.Contains('.'))
+        if (string.IsNullOrWhiteSpace(TBFullName.Text) || string.IsNullOrWhiteSpace(TBLogin.Text) || string.IsNullOrWhiteSpace(TBPassword.Text) || !TBLogin.Text.Contains('@') || !TBLogin.Text.Contains('.') || TBFullName.Text.Count() > 300 || TBLogin.Text.Count() > 300 || TBPassword.Text.Count() > 300)
         {
             return;
         }

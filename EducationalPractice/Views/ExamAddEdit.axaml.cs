@@ -36,6 +36,7 @@ public partial class ExamAddEdit : Window
         else
         {
             if (!DateOnly.TryParse(TBDate.Text, out DateOnly result)) return;
+            if (!int.TryParse(TBEstimation.Text, out int result1)) return;
             if(exam == null)
             {
                 var new_exam = new Exam()

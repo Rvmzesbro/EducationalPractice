@@ -2,6 +2,7 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using EducationalPractice.Models;
+using System.Linq;
 
 namespace EducationalPractice;
 
@@ -17,7 +18,7 @@ public partial class StudentAddEdit : Window
 
     private async void BTAdd_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
-        if (string.IsNullOrWhiteSpace(TBFullName.Text) || string.IsNullOrWhiteSpace(TBNumber.Text))
+        if (string.IsNullOrWhiteSpace(TBFullName.Text) || string.IsNullOrWhiteSpace(TBNumber.Text) || TBNumber.Text.Count() > 50 || TBFullName.Text.Count() > 50)
         {
             return;
         }

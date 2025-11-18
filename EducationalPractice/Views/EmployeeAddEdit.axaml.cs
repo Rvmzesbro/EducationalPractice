@@ -32,7 +32,7 @@ public partial class EmployeeAddEdit : Window
 
     private async void BTAdd_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
-        if (string.IsNullOrWhiteSpace(TBLogin.Text) || string.IsNullOrWhiteSpace(TBPassword.Text) || CBRole.SelectedItem == null || string.IsNullOrWhiteSpace(TBSalary.Text) || string.IsNullOrWhiteSpace(TBFullName.Text) || !TBLogin.Text.Contains('@') || !TBLogin.Text.Contains('.'))
+        if (string.IsNullOrWhiteSpace(TBLogin.Text) || string.IsNullOrWhiteSpace(TBPassword.Text) || CBRole.SelectedItem == null || string.IsNullOrWhiteSpace(TBSalary.Text) || string.IsNullOrWhiteSpace(TBFullName.Text) || !TBLogin.Text.Contains('@') || !TBLogin.Text.Contains('.') || TBCode.Text.Count() > 50 || TBFullName.Text.Count() > 300 || TBPost.Text.Count() > 50 || TBSalary.Text.Count() > 50 || TBDirector.Text.Count() > 50 || TBLogin.Text.Count() > 300 || TBPassword.Text.Count() > 300)
         {
             return;
         }
@@ -40,6 +40,14 @@ public partial class EmployeeAddEdit : Window
         {
             if (!decimal.TryParse(TBSalary.Text, out decimal result)) return;
 
+            if(TBDirector.Text != null)
+            {
+                if (!short.TryParse(TBDirector.Text, out short result1)) return;
+            }
+            else
+            {
+                director = 0;
+            }
 
             if (employee == null)
             {

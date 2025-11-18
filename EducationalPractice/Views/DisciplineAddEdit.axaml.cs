@@ -18,7 +18,7 @@ public partial class DisciplineAddEdit : Window
 
     private async void BTAdd_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
-        if (string.IsNullOrWhiteSpace(TBName.Text) || string.IsNullOrWhiteSpace(TBVolume.Text) || string.IsNullOrWhiteSpace(TBExecutor.Text) || TBExecutor.Text.Count() > 2 || TBName.Text.Count() > 100)
+        if (string.IsNullOrWhiteSpace(TBName.Text) || string.IsNullOrWhiteSpace(TBVolume.Text) || string.IsNullOrWhiteSpace(TBExecutor.Text) || TBExecutor.Text.Count() > 2 || TBName.Text.Count() > 100 || TBVolume.Text.Count() > 20)
         {
             return;
         }

@@ -86,9 +86,13 @@ public partial class Main : UserControl
                 {
                     App.MainWindow.MyContent.Content = new ManagerStudent(employee);
                 }
-                else
+                else if(employee.RoleId == 3)
                 {
                     App.MainWindow.MyContent.Content = new EmployeePage(employee);
+                }
+                else
+                {
+                    App.MainWindow.MyContent.Content = new AdminEngineer(employee);
                 }
 
             }
