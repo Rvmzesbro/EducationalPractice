@@ -32,9 +32,21 @@ public partial class EmployeeAddEdit : Window
 
     private async void BTAdd_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
-        if (string.IsNullOrWhiteSpace(TBLogin.Text) || string.IsNullOrWhiteSpace(TBPassword.Text) || CBRole.SelectedItem == null || string.IsNullOrWhiteSpace(TBSalary.Text) || string.IsNullOrWhiteSpace(TBFullName.Text) || !TBLogin.Text.Contains('@') || !TBLogin.Text.Contains('.') || TBCode.Text.Count() > 50 || TBFullName.Text.Count() > 300 || TBPost.Text.Count() > 50 || TBSalary.Text.Count() > 50 || TBDirector.Text.Count() > 50 || TBLogin.Text.Count() > 300 || TBPassword.Text.Count() > 300)
+        if (string.IsNullOrWhiteSpace(TBLogin.Text) || string.IsNullOrWhiteSpace(TBPassword.Text) || CBRole.SelectedItem == null || string.IsNullOrWhiteSpace(TBSalary.Text) || string.IsNullOrWhiteSpace(TBFullName.Text) || !TBLogin.Text.Contains('@') || !TBLogin.Text.Contains('.') ||  TBFullName.Text.Count() > 300 || TBSalary.Text.Count() > 50 ||  TBLogin.Text.Count() > 300 || TBPassword.Text.Count() > 300)
         {
             return;
+        }
+        if(!string.IsNullOrWhiteSpace(TBDirector.Text))
+        {
+            if (TBDirector.Text.Count() > 50 ) return;
+        }
+        if (!string.IsNullOrWhiteSpace(TBPost.Text))
+        {
+            if(TBPost.Text.Count() > 50) return;
+        }
+        if(!string.IsNullOrWhiteSpace(TBCode.Text))
+        {
+            if (TBCode.Text.Count() > 50) return;
         }
         else
         {

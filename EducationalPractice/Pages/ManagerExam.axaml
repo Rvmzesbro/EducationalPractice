@@ -3,6 +3,190 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="EducationalPractice.ManagerExam">
-  Welcome to Avalonia!
+             x:Class="EducationalPractice.ManagerExam"
+			 Background="#252746">
+  
+    <UserControl.Styles>
+		<StyleInclude Source="/Styles/AdminWindowStyle.axaml"></StyleInclude>
+	</UserControl.Styles>
+	
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+		<Expander x:Name="ProfileExpander"
+			   Background="#252746"
+			  BorderBrush="Black"
+			  BorderThickness="1"
+						  HorizontalAlignment="Right"
+						  VerticalAlignment="Top"
+				  Grid.RowSpan="2"
+				  Width="140"
+			  CornerRadius="8"
+			  Margin="10">
+
+			<Expander.Header>
+				<StackPanel Orientation="Horizontal" Spacing="8">
+					<StackPanel VerticalAlignment="Center">
+						<TextBlock Text="{Binding FullName}" FontWeight="Bold"/>
+						<TextBlock Text="Manager" FontSize="12" Opacity="0.7"/>
+					</StackPanel>
+				</StackPanel>
+			</Expander.Header>
+
+			<Expander.Content>
+				<StackPanel Spacing="5">
+					<Button x:Name="BTProfile" Click="BTProfile_Click"
+							Width="110"
+							HorizontalAlignment="Center">
+						<TextBlock Text="My profile"
+								   HorizontalAlignment="Center"
+								   VerticalAlignment="Center"/>
+					</Button>
+					<Button x:Name="BTLogout" Click="BTLogout_Click"
+							Width="110"
+							HorizontalAlignment="Center">
+						<TextBlock Text="Logout"
+								   HorizontalAlignment="Center"
+								   VerticalAlignment="Center"/>
+					</Button>
+				</StackPanel>
+			</Expander.Content>
+		</Expander>
+
+		<StackPanel Orientation="Horizontal"
+					Margin="10"
+					HorizontalAlignment="Center">
+			
+		</StackPanel>
+		
+		
+		
+		<Viewbox Grid.Row="1"
+				 VerticalAlignment="Top"
+				 Margin="0 20 0 0">
+			<Grid>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="*"/>
+				</Grid.RowDefinitions>
+
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition/>
+					<ColumnDefinition/>
+				</Grid.ColumnDefinitions>
+
+				<TabControl  Width="1300"
+								  Height="700"
+							 Margin="10">
+					
+					<TabItem
+							 x:Name="TIExam"
+							 Tapped="TIExam_Tapped">
+						<TabItem.Header>
+							<TextBlock Text="Exams" HorizontalAlignment="Center"/>
+						</TabItem.Header>
+
+											<Grid>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="auto"/>
+							<RowDefinition Height="*"/>
+						</Grid.RowDefinitions>
+						<StackPanel Orientation="Horizontal"
+   Grid.Row="0">
+							<ComboBox x:Name="CBDate"
+					  Classes="CBoxic"
+					  SelectionChanged="CBCode_SelectionChanged"
+					  Width="200"
+					   Height="30"
+					  Margin="0 10 10 10"/>
+							<ComboBox x:Name="CBDiscipline"
+					  Classes="CBoxic"
+					  SelectionChanged="CBPost_SelectionChanged"
+					  Width="200"
+					   Height="30"
+					  Margin="0 10 10 10"/>
+							<ComboBox x:Name="CBStudent"
+					  Classes="CBoxic"
+					  SelectionChanged="CBPost_SelectionChanged"
+					  Width="200"
+					   Height="30"
+					  Margin="0 10 10 10"/>
+							<ComboBox x:Name="CBEmployee"
+					  Classes="CBoxic"
+					  SelectionChanged="CBPost_SelectionChanged"
+					  Width="200"
+					   Height="30"
+					  Margin="0 10 10 10"/>
+							<Button x:Name="BTClear3"
+									Classes="BTBack"
+									Height="30"
+									Margin="0 10"
+									Width="70"
+									Click="BTClear_Click">
+								<TextBlock Text="Clear"
+							FontSize="13"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"/>
+							</Button>
+						</StackPanel>
+					<DataGrid x:Name="DGExam"
+			   Grid.Row="1"
+					  IsReadOnly="True"
+					  DoubleTapped="DGExam_DoubleTapped"
+					  AutoGenerateColumns="False">
+				<DataGrid.Columns>
+					<DataGridTextColumn Header="Date"
+										Binding="{Binding Date}"/>
+					<DataGridTextColumn Header="Discipline"
+										Binding="{Binding Discipline.Name}"/>
+					<DataGridTextColumn Header="Student"
+										Binding="{Binding Student.FullName}"/>
+					<DataGridTextColumn Header="Auditorium"
+										Binding="{Binding Auditorium}"/>
+					<DataGridTextColumn Header="Estimation"
+										Binding="{Binding Estimation}"/>
+					<DataGridTextColumn Header="Employee"
+										Binding="{Binding Employee.FullName}"/>
+				</DataGrid.Columns>
+</DataGrid>
+					</Grid>
+					</TabItem>
+				</TabControl>
+			</Grid>
+		</Viewbox>
+		<StackPanel Orientation="Horizontal"
+							Grid.Row="2"
+					Margin="20">
+			<Button x:Name="BTAdd"
+				Classes="BTBack"
+				HorizontalAlignment="Right"
+				VerticalAlignment="Top"
+				Margin="10"
+				Width="70"
+				Height="30"
+				Click="BTAdd_Click">
+				<TextBlock Classes="TBBack"
+						   Text="Add"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"/>
+				</Button>
+			<Button x:Name="BTRemove"
+				Classes="BTBack"
+				HorizontalAlignment="Right"
+				VerticalAlignment="Top"
+				Margin="10"
+				Width="70"
+				Height="30"
+				Click="BTRemove_Click">
+				<TextBlock Classes="TBBack"
+						   Text="Remove"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"/>
+			</Button>
+		</StackPanel>
+	</Grid>
+
 </UserControl>

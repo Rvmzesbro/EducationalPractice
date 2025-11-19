@@ -21,37 +21,51 @@ public partial class AdminEngineer : UserControl
     {
         if (TIEmployee.IsSelected)
         {
-            if (TBSearch.Text == null || DGEmployee == null) return;
+            if (DGEmployee == null) return;
             var searchText = TBSearch.Text?.ToLower() ?? string.Empty;
-
+            var selectedCode = CBCode.SelectedItem?.ToString().ToLower();
+            var selectedPost = CBPost.SelectedItem?.ToString().ToLower();
             var allEmployee = App.db.Employees.ToList();
 
             if (!string.IsNullOrWhiteSpace(searchText))
             {
                 allEmployee = allEmployee.Where(p => p.FullName?.ToLower().Contains(searchText) == true).ToList();
             }
+            if (selectedCode != null)
+            {
+                allEmployee = allEmployee.Where(p => p.Code == selectedCode).ToList();
+            }
+            if (selectedPost != null)
+            {
+                allEmployee = allEmployee.Where(p => p.Post == selectedPost).ToList();
+            }
 
             DGEmployee.ItemsSource = allEmployee;
         }
         if (TIStudent.IsSelected)
         {
-            if (TBSearch.Text == null || DGStudent == null) return;
+            if (DGStudent == null) return;
             var searchText = TBSearch.Text?.ToLower() ?? string.Empty;
-
+            var selectedNumber = CBNumber.SelectedItem?.ToString().ToLower();
             var allEmployee = App.db.Students.ToList();
 
             if (!string.IsNullOrWhiteSpace(searchText))
             {
                 allEmployee = allEmployee.Where(p => p.FullName?.ToLower().Contains(searchText) == true).ToList();
             }
+            if (selectedNumber != null)
+            {
+                allEmployee = allEmployee.Where(p => p.Number == selectedNumber).ToList();
+            }
 
             DGStudent.ItemsSource = allEmployee;
         }
         if (TIDiscipline.IsSelected)
         {
-            if (TBSearch.Text == null || DGDiscipline == null) return;
+            if (DGDiscipline == null) return;
             var searchText = TBSearch.Text?.ToLower() ?? string.Empty;
-
+            var selectedVolume = CBVolume.SelectedItem?.ToString().ToLower();
+            var selectedExecutor = CBExecutor.SelectedItem?.ToString().ToLower();
             var allEmployee = App.db.Disciplines.ToList();
 
             if (!string.IsNullOrWhiteSpace(searchText))
@@ -59,7 +73,44 @@ public partial class AdminEngineer : UserControl
                 allEmployee = allEmployee.Where(p => p.Name?.ToLower().Contains(searchText) == true).ToList();
             }
 
+            if (selectedVolume != null)
+            {
+                allEmployee = allEmployee.Where(p => p.Volume.ToString() == selectedVolume).ToList();
+            }
+
+            if (selectedExecutor != null)
+            {
+                allEmployee = allEmployee.Where(p => p.Executor == selectedExecutor).ToList();
+            }
+
             DGDiscipline.ItemsSource = allEmployee;
+        }
+        if (TIExam.IsSelected)
+        {
+            if (DGExam == null) return;
+            var selectedDate = CBDate.SelectedItem?.ToString().ToLower();
+            var selectedDiscipline = CBDiscipline.SelectedItem as Discipline;
+            var selectedStudent = CBStudent.SelectedItem as Student;
+            var selectedEmployee = CBEmployee.SelectedItem as Employee;
+            var AllExam = App.db.Exams.ToList();
+
+            if (selectedDate != null)
+            {
+                AllExam = AllExam.Where(p => p.Date.ToString() == selectedDate).ToList();
+            }
+            if (selectedDiscipline != null)
+            {
+                AllExam = AllExam.Where(p => p.DisciplineId == selectedDiscipline.Id).ToList();
+            }
+            if (selectedStudent != null)
+            {
+                AllExam = AllExam.Where(p => p.StudentId == selectedStudent.Id).ToList();
+            }
+            if (selectedEmployee != null)
+            {
+                AllExam = AllExam.Where(p => p.EmployeeId == selectedEmployee.Id).ToList();
+            }
+            DGExam.ItemsSource = AllExam;
         }
 
     }
@@ -70,6 +121,15 @@ public partial class AdminEngineer : UserControl
         DGStudent.ItemsSource = App.db.Students.ToList();
         DGDiscipline.ItemsSource = App.db.Disciplines.ToList();
         DGExam.ItemsSource = App.db.Exams.ToList();
+        CBCode.ItemsSource = App.db.Employees.Where(p => !string.IsNullOrWhiteSpace(p.Code)).Select(p => p.Code).Distinct().ToList();
+        CBPost.ItemsSource = App.db.Employees.Where(p => !string.IsNullOrWhiteSpace(p.Post)).Select(p => p.Post).Distinct().ToList();
+        CBNumber.ItemsSource = App.db.Students.Where(p => !string.IsNullOrWhiteSpace(p.Number)).Select(p => p.Number).Distinct().ToList();
+        CBVolume.ItemsSource = App.db.Disciplines.Where(p => !string.IsNullOrWhiteSpace(p.Volume.ToString())).Select(p => p.Volume).Distinct().ToList();
+        CBExecutor.ItemsSource = App.db.Disciplines.Where(p => !string.IsNullOrWhiteSpace(p.Executor)).Select(p => p.Executor).Distinct().ToList();
+        CBDate.ItemsSource = App.db.Exams.Select(p => p.Date.ToString()).Distinct().ToList();
+        CBDiscipline.ItemsSource = App.db.Disciplines.ToList();
+        CBStudent.ItemsSource = App.db.Students.ToList();
+        CBEmployee.ItemsSource = App.db.Employees.ToList();
         Filter();
     }
 
@@ -227,5 +287,27 @@ public partial class AdminEngineer : UserControl
     private void TIEmployee_Tapped(object? sender, Avalonia.Input.TappedEventArgs e)
     {
         TBSearch.Opacity = 1.0;
+    }
+    private void CBCode_SelectionChanged(object? sender, SelectionChangedEventArgs e)
+    {
+        Filter();
+    }
+
+    private void CBPost_SelectionChanged(object? sender, SelectionChangedEventArgs e)
+    {
+        Filter();
+    }
+
+    private void BTClear_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+    {
+        CBCode.Clear();
+        CBPost.Clear();
+        CBNumber.Clear();
+        CBVolume.Clear();
+        CBExecutor.Clear();
+        CBDate.Clear();
+        CBStudent.Clear();
+        CBDiscipline.Clear();
+        CBEmployee.Clear();
     }
 }

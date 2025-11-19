@@ -18,7 +18,30 @@ public partial class Profile : UserControl
 
     private void BTBack_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
-        App.MainWindow.MyContent.Content = new Admin(employee);
+        if(employee.RoleId == 1)
+        {
+            App.MainWindow.MyContent.Content = new Admin(employee);
+        }
+        if (employee.RoleId == 2)
+        {
+            App.MainWindow.MyContent.Content = new ManagerExam(employee);
+        }
+        if (employee.RoleId == 3)
+        {
+            App.MainWindow.MyContent.Content = new EmployeePage(employee);
+        }
+        if (employee.RoleId == 4)
+        {
+            App.MainWindow.MyContent.Content = new ManagerDiscipline(employee);
+        }
+        if (employee.RoleId == 5)
+        {
+            App.MainWindow.MyContent.Content = new ManagerStudent(employee);
+        }
+        if (employee.RoleId == 6)
+        {
+            App.MainWindow.MyContent.Content = new AdminEngineer(employee);
+        }
     }
 
     private async void BTEdit_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
